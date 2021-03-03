@@ -72,17 +72,20 @@ set(SOURCES
 
     # Header files
     Aircraft.h
-    Airspace.h
     AviationUnits.h
     Clock.h
-    Downloadable.h
-    DownloadableGroup.h
-    DownloadableGroupWatcher.h
     FlightRoute.h
-    GeoMapProvider.h
+    geomaps/Airspace.h
+    geomaps/Downloadable.h
+    geomaps/DownloadableGroup.h
+    geomaps/DownloadableGroupWatcher.h
+    geomaps/GeoMapProvider.h
+    geomaps/MapManager.h
+    geomaps/TileHandler.h
+    geomaps/TileServer.h
+    geomaps/Waypoint.h
     GlobalSettings.h
     Librarian.h
-    MapManager.h
     MobileAdaptor.h
     Navigation_FLARMAdaptor.h
     Navigation_Geoid.h
@@ -91,7 +94,6 @@ set(SOURCES
     SimGeoPositionInfoSource.h
     SimInterface.h
     ScaleQuickItem.h
-    Waypoint.h
     weather/Decoder.h
     weather/DownloadManager.h
     weather/METAR.h
@@ -101,20 +103,23 @@ set(SOURCES
 
     # C++ files
     Aircraft.cpp
-    Airspace.cpp
     AviationUnits.cpp
     Clock.cpp
-    Downloadable.cpp
-    DownloadableGroup.cpp
-    DownloadableGroupWatcher.cpp
     FlightRoute.cpp
     FlightRoute_GPX.cpp
     FlightRoute_Leg.cpp
-    GeoMapProvider.cpp
+    geomaps/Airspace.cpp
+    geomaps/Downloadable.cpp
+    geomaps/DownloadableGroup.cpp
+    geomaps/DownloadableGroupWatcher.cpp
+    geomaps/GeoMapProvider.cpp
+    geomaps/MapManager.cpp
+    geomaps/TileHandler.cpp
+    geomaps/TileServer.cpp
+    geomaps/Waypoint.cpp
     GlobalSettings.cpp
     Librarian.cpp
     main.cpp
-    MapManager.cpp
     MobileAdaptor.cpp
     MobileAdaptor_share.cpp
     Navigation_FLARMAdaptor.cpp
@@ -124,9 +129,6 @@ set(SOURCES
     SimGeoPositionInfoSource.cpp
     SimInterface.cpp
     ScaleQuickItem.cpp
-    TileHandler.cpp
-    TileServer.cpp
-    Waypoint.cpp
     weather/Decoder.cpp
     weather/DownloadManager.cpp
     weather/METAR.cpp
