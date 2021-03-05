@@ -167,6 +167,7 @@ void Navigation::FLARMAdaptor::connectToTrafficReceiver()
 
     socket->abort();
     socket->connectToHost(QStringLiteral("192.168.1.1"), 2000);
+    textStream.setDevice(socket);
 
     // Update properties
     setErrorString(QString());
@@ -746,8 +747,10 @@ void Navigation::FLARMAdaptor::readFromSimulatorStream()
 
 void Navigation::FLARMAdaptor::readFromStream()
 {
-    auto sentence = textStream.readLine();
-    processFLARMMessage(sentence);
+    QString sentence;
+    while( textStream.readLineInto(&sentence) ) {
+        processFLARMMessage(sentence);
+    }
 }
 
 
